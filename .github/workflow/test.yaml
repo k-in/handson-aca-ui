@@ -1,7 +1,11 @@
 name: Trigger auto deployment
 on:
   # 手動実行用トリガー
-  workflow_dispatch:      
+  workflow_dispatch:
+# Add env
+env:
+  CONTAINER_REGISTRY:  arc202209p2dnx2l5yrwyocg.azurecr.io # ACR のドメイン (~.azurecr.io) をこちらに設定
+  
 jobs:
   build:
     runs-on: ubuntu-18.04
